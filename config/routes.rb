@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-
-  resources :portfolios
+	# except expects an array
+  resources :portfolios, except: [:show]
+  get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
   # get 'pages/home'
 
