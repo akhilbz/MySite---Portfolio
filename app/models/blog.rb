@@ -5,6 +5,7 @@ class Blog < ApplicationRecord
 
   validates_presence_of :title, :body
   # this sees for the items that contain the data from above
+  belongs_to :topic
 end
 
 
